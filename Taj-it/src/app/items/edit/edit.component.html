@@ -1,0 +1,52 @@
+<div class="row pt-lg mb-lg pb-xl">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="row">
+      <h4 class="font-weight-semibold mb-xlg">Add New Item: </h4>
+    </div>
+    <form method="post" (ngSubmit)="OnEdit(MyForm)" #MyForm=ngForm>
+        <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <input #id=ngModel [(ngModel)]="medicine.id" name="did" type="text"  value="medicine.id" data-msg-required="Please enter your name." maxlength="100"
+                  class="form-control"  id="subject" required>
+              </div>
+            </div>
+          </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #dname=ngModel [(ngModel)]="medicine.name" name="dname" type="text"  value="medicine.name" data-msg-required="Please enter your name." maxlength="100"
+              class="form-control"  id="name" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #dBDesc=ngModel [(ngModel)]="medicine.price" name="dBDesc" type="text"  value="medicine.price" data-msg-required="Please enter the subject." maxlength="100"
+              class="form-control"  id="subject" required>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+              <label id="file-wrapper">  Photo
+            <input class="add-input" #dPhoto=ngModel [(ngModel)]="medicine.image" name="dPhoto" type="file" value="" data-msg-required="Please enter the subject." maxlength="100"
+              class="form-control"  id="subject" required>
+              </label>
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-md-12">
+          <input type="submit" value="Save" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading..."> &nbsp;
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="col-md-2"></div>
+</div>
+

@@ -1,0 +1,19 @@
+.one-item
+{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    width: 196px !important;
+    text-align: center;
+}
+.btnn
+{
+    
+    padding: 5px 21px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #1663ae;
+    border-radius: 5px;
+    border: 1px;
+    cursor: pointer;
+}

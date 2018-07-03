@@ -1,0 +1,17 @@
+<table class="table table-striped table-hover">
+  <tbody>
+    <tr>
+      <td class = "one-item">{{medicine.id}}</td>
+      <td class = "one-item">{{medicine.name}}</td>
+      <td class = "one-item">{{medicine.price}}</td>
+      <td class = "one-item">{{medicine.image}}</td>
+      <td class = "one-item">{{medicine.expireDate}}</td>
+      <td class = "one-item" >
+        <input class="btnn" routerLink="/edit/{{medicine.id}}" type="button" value="Edit" >
+        <input class="btnn" type="button" value="Del" (click)="OnDel()" >
+       
+        
+    </td>
+    </tr>
+  </tbody>
+</table>

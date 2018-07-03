@@ -1,0 +1,25 @@
+<div>Home >> Items</div>
+<div class="item-div">Items</div>
+<input class="add-btn" type="button" value="Add Item" (click)="lg.show()">
+<div bsModal #lg="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Item</h5>
+                <button type="button" class="close pull-right" (click)="lg.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <app-add></app-add>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" (click)="lg.hide()" aria-label="Close">
+                            Close
+                        </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-listing></app-listing>

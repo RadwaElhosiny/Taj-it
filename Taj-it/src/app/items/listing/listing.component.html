@@ -1,0 +1,43 @@
+<div class="dropdown">
+  <button class="dropbtn">Num Of Items</button>
+  <div class="dropdown-content">
+    <a (click)="SetItemValue(4)">4</a>
+    <a (click)="SetItemValue(8)">8</a>
+    <a (click)="SetItemValue(12)">12</a>
+  </div>
+</div>
+<form id="propertiesForm" action="demo-real-estate-properties.html" method="POST" class="search-form">
+  <input class="input-field search" type="text" [(ngModel)]='listFilter' placeholder="Search Medicines.." name="patientName">
+</form>
+<table class="table table-striped ">
+<thead>
+  <tr>
+    <th class = "one-item" >No 
+      <i (click)="OrderItById()" class="fa fa-arrow-circle-o-down icon" aria-hidden="true"></i>
+      <i (click)="OrderItByIdReverse()" class="fa fa-arrow-circle-o-up icon" aria-hidden="true"></i>
+    </th>
+
+    <th class = "one-item">Name
+       <i (click)="OrderItByName()" class="fa fa-arrow-circle-o-down icon" aria-hidden="true"></i>
+       <i (click)="OrderItByNameReverse()" class="fa fa-arrow-circle-o-up icon" aria-hidden="true"></i>
+      </th>
+
+    <th class = "one-item">Price
+       <i (click)="OrderItByPrice()" class="fa fa-arrow-circle-o-down icon" aria-hidden="true"></i>
+       <i (click)="OrderItByPriceReverse()" class="fa fa-arrow-circle-o-up icon" aria-hidden="true"></i>
+      </th>
+    <th class = "one-item">Image
+       <i (click)="OrderItById()" class="fa fa-arrow-circle-o-down icon" aria-hidden="true"></i>
+       <i (click)="OrderItByIdReverse()" class="fa fa-arrow-circle-o-up icon" aria-hidden="true"></i>
+      </th>
+    <th class = "one-item">Expire Date
+       <i (click)="OrderItByDate()" class="fa fa-arrow-circle-o-down icon" aria-hidden="true"></i>
+       <i (click)="OrderItByIdReverse()" class="fa fa-arrow-circle-o-up icon" aria-hidden="true"></i>
+      </th>
+    <th class = "one-item">Options</th>
+  </tr>
+</thead>
+</table>
+
+<app-small-item  *ngFor="let med of filteredMed | paginate: { itemsPerPage:num, currentPage: p }; let i = index" [medicine]="med"></app-small-item>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
